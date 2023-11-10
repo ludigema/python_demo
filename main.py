@@ -10,9 +10,9 @@ def winner(nb, enchere, acheteurs):
 		for a in acheteurs :
 			if a.offre[i] > enchere.prixEnchere:
 				enchere.prixEnchere = a.offre[i]
-			if a.offre[i] > enchere.prixEnchere  and win == None or win.name != a.name:
 				win = a
-				
+	return "" if win == None else win.name
+
 def createAcheteurs(nb):
 	acheteurs = []
 	for i in range(nb):
